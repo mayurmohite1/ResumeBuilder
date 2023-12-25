@@ -10,7 +10,7 @@ intuitive experience for users to input, edit, and format their information. Thi
 
 ## Tech Stack
 
-**Client:** HTML, CSS , JavaScript, Bootstrap.
+**Client:** EJS, CSS , JavaScript, Bootstrap.
 
 **Server:** Node, Express
 
