@@ -1,0 +1,44 @@
+/*#cv-form {
+  display: none;
+}
+*/
+
+@media print {
+  #no-print {
+    display: none;
+  }
+}
+
+#cv-template {
+  display: none;
+}
+#cv-template2 {
+  display: none;
+}
+
+#cv-template3 {
+  display: none;
+}
+.myimg {
+  border-radius: 50%;
+  width: 200px;
+}
+
+.generate-cv {
+  color: white;
+}
+
+/* Template 1*/
+.background {
+  background-color: rgb(219, 194, 212);
+}
+
+/* Template 2*/
+.background2 {
+  background-color: rgb(125, 233, 255);
+}
+
+/* Template 3*/
+.background3 {
+  background-color: rgb(255, 184, 156);
+}

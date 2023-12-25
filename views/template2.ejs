@@ -1,0 +1,323 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Resume</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC"
+      crossorigin="anonymous"
+    />
+    <link href="/public/template.css" rel="stylesheet" type="text/css" />
+  </head>
+  <body>
+    <div class="container" id="cv-form">
+      <h1 class="text-center my-3">Build Your Resume</h1>
+
+      <div class="row">
+        <!-- first column -->
+        <div class="col-md-6">
+          <h3 class="text-center my-3">Personal Information</h3>
+
+          <!-- Your name -->
+          <div class="form-group">
+            <label for="nameField">Name</label>
+            <input
+              type="text"
+              id="nameField"
+              placeholder="Your full name"
+              class="form-control"
+            />
+          </div>
+
+          <!-- Contact Number -->
+          <div class="form-group mt-3">
+            <label for="contactField">Contact</label>
+            <input
+              type="text"
+              id="contactField"
+              placeholder="Contact Number"
+              class="form-control"
+            />
+          </div>
+          <!-- Address -->
+          <div class="form-group mt-3">
+            <label for="addressField">Address</label>
+            <textarea
+              id="addressField"
+              placeholder="Residential address"
+              class="form-control"
+              rows="5"
+            ></textarea>
+          </div>
+          <!-- Links -->
+          <p class="text-secondary my-3">Important Links</p>
+          <div class="form-group mt-2">
+            <label for="fbField">Facebook </label>
+            <input
+              type="text"
+              id="fbField"
+              placeholder="link"
+              class="form-control"
+            />
+          </div>
+          <div class="form-group mt-2">
+            <label for="instaField">Instagram</label>
+            <input
+              type="text"
+              id="instaField"
+              placeholder="link"
+              class="form-control"
+            />
+          </div>
+          <div class="form-group my-2">
+            <label for="linkedField">LinkedIn</label>
+            <input
+              type="text"
+              id="LinkedField"
+              placeholder="link"
+              class="form-control"
+            />
+          </div>
+        </div>
+
+        <!-- second column -->
+        <div class="col-md-6">
+          <h3 class="text-center my-3">Professional Information</h3>
+          <!-- Objective -->
+          <div class="form-group mt-3">
+            <label for="">Objective</label>
+            <textarea
+              id="objectiveField"
+              rows="3"
+              placeholder="Enter here"
+              class="form-control"
+            ></textarea>
+          </div>
+          <!-- Work experience -->
+          <div class="form-group mt-3" id="we">
+            <label for="">Work experience</label>
+            <textarea
+              placeholder="Enter here"
+              class="form-control weField"
+              rows="3"
+            ></textarea>
+
+            <!-- Work Experience adding dynamically -->
+            <div class="container text-center mt-3" id="weAddButton">
+              <button onclick="addNewWEField()" class="btn btn-primary btn-sm">
+                Add
+              </button>
+            </div>
+          </div>
+
+          <!-- Education Qualification -->
+          <div class="form-group mt-3" id="eq">
+            <label for="">Education Qualification</label>
+            <textarea
+              rows="3"
+              placeholder="Enter here"
+              class="form-control eqField"
+              rows="2"
+            ></textarea>
+
+            <!-- Education Qualification adding dynamically -->
+            <div class="container text-center mt-3" id="eqAddButton">
+              <button onclick="addNewEQField()" class="btn btn-primary btn-sm">
+                Add
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- Generate Resume Button -->
+      <div class="container text-center my-5">
+        <button onclick="generateCV()" class="btn btn-dark btn-lg">
+          Generate CV
+        </button>
+      </div>
+    </div>
+
+    <!-- CV template1 -->
+    <div class="container" id="cv-template2">
+      <div class="row">
+        <div class="col-md-1 text-center py-5 background2">
+          <!-- first column -->
+          <img
+            src="https://static.vecteezy.com/system/resources/previews/020/765/399/non_2x/default-profile-account-unknown-icon-black-silhouette-free-vector.jpg"
+            alt="Default Profile"
+            class="img-fluid myimg"
+          />
+
+          <div class="container" style="font-weight: 500">
+            <p id="nameT1">Mayur Mohite</p>
+            <p id="contactT">+986557455584, +94565 664</p>
+            <p id="addressT">
+              oihniblubcskudycbsydiaivykcvkyb sector 58 noida,india
+            </p>
+            <hr />
+
+            <p>
+              <a id="fbT" href="#1">https://www.facebook.com</a>
+              <a id="instaT" href="#2">https://www.Instagram.com</a>
+              <a id="LinkedT" href="#3">https://www.LinkedIn.com</a>
+            </p>
+          </div>
+        </div>
+        <div class="col-md-8 py-5">
+          <!-- second column -->
+          <h1 id="nameT2" class="text-center" style="font-weight: 700">
+            Mayur Mohite
+          </h1>
+
+          <!-- objective card -->
+
+          <div class="card mt-4">
+            <div class="card-header background2">
+              <h3>Objective</h3>
+            </div>
+            <div class="card-body">
+              <p id="objectiveT">
+                Lorem ipsum dolor sit amet consectetur, adipisicing elit.
+                Perspiciatis ducimus minima illo vero nobis necessitatibus modi,
+                eveniet quod nisi provident tempora iste aspernatur accusamus.
+                Rerum corrupti ipsam esse doloremque similique consectetur
+                voluptatibus iure, perferendis, dicta consequuntur ipsum
+                dolorum! Repudiandae officia maxime tenetur? Quam sint facere
+                quia quibusdam nihil maiores error?
+              </p>
+            </div>
+          </div>
+
+          <!-- Work Experience -->
+          <div class="card mt-4">
+            <div class="card-header background2">
+              <h3>Work Experience</h3>
+            </div>
+            <div class="card-body">
+              <ul id="weT">
+                <li>
+                  Lorem ipsum dolor sit amet consectetur, adipisicing elit.
+                  Veritatis, distinctio.
+                </li>
+              </ul>
+            </div>
+          </div>
+
+          <!-- Education Qualification -->
+          <div class="card mt-4">
+            <div class="card-header background2">
+              <h3>Education Qualification</h3>
+            </div>
+            <div class="card-body">
+              <ul id="eqT">
+                <li>
+                  Lorem ipsum dolor sit amet consectetur, adipisicing elit.
+                  Veritatis, distinctio.
+                </li>
+              </ul>
+            </div>
+          </div>
+
+          <div class="container mt-3 text-center" id="no-print">
+            <button onclick="printCV()" class="btn-background">Print CV</button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+      crossorigin="anonymous"
+    ></script>
+    <!-- Add this modification to the end of your script section -->
+    <script>
+      function addNewWEField() {
+        let newNode = document.createElement("textarea");
+        newNode.classList.add("form-control");
+        newNode.classList.add("weField");
+        newNode.setAttribute("rows", "3");
+        newNode.setAttribute("placeholder", "Enter here");
+
+        let weOb = document.getElementById("we");
+        let weAddButtonOb = document.getElementById("weAddButton");
+        weOb.insertBefore(newNode, weAddButtonOb);
+      }
+
+      function addNewEQField() {
+        let newNode = document.createElement("textarea");
+        newNode.classList.add("form-control");
+        newNode.classList.add("eqField");
+        newNode.setAttribute("rows", "3");
+        newNode.setAttribute("placeholder", "Enter here");
+
+        let eqOb = document.getElementById("eq");
+        let eqAddButtonOb = document.getElementById("eqAddButton");
+        eqOb.insertBefore(newNode, eqAddButtonOb);
+      }
+
+      //generating cv
+      function generateCV() {
+        let nameField = document.getElementById("nameField").value;
+
+        let nameT1 = document.getElementById("nameT1");
+
+        nameT1.innerHTML = nameField;
+        //direct
+
+        document.getElementById("nameT2").innerHTML = nameField;
+
+        //contacts
+        document.getElementById("contactT").innerHTML =
+          document.getElementById("contactField").value;
+
+        //address
+        document.getElementById("addressT").innerHTML =
+          document.getElementById("addressField").value;
+
+        document.getElementById("fbT").innerHTML =
+          document.getElementById("fbField").value;
+
+        document.getElementById("instaT").innerHTML =
+          document.getElementById("instaField").value;
+
+        document.getElementById("LinkedT").innerHTML =
+          document.getElementById("LinkedField").value;
+
+        //objective
+        document.getElementById("objectiveT").innerHTML =
+          document.getElementById("objectiveField").value;
+
+        //work experience
+
+        let wes = document.getElementsByClassName("weField");
+
+        let str = "";
+
+        for (let e of wes) {
+          str = str + `<li> ${e.value}</li>`;
+        }
+        document.getElementById("weT").innerHTML = str;
+
+        // education qualification
+        let eqs = document.getElementsByClassName("eqField");
+
+        let str1 = "";
+
+        for (let e of eqs) {
+          str1 = str1 + `<li> ${e.value}</li>`;
+        }
+        document.getElementById("eqT").innerHTML = str1;
+        document.getElementById("cv-form").style.display = "none";
+        document.getElementById("cv-template2").style.display = "block";
+      }
+
+      //print cv
+      function printCV() {
+        window.print();
+      }
+    </script>
+  </body>
+</html>
